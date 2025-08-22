@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: library-management
+    runtime: docker  # Use Docker runtime
+    repo: https://github.com/your-username/LibraryManagementSystem
+    plan: free  # Change to 'starter' or 'standard' if needed
+    envVars:
+      - key: DATABASE_URL
+        value: "jdbc:mysql://your-database-host:3306/LibraryDB"
+      - key: DATABASE_USER
+        value: "root"
+      - key: DATABASE_PASSWORD
+        value: ""
+    region: oregon  # Choose the closest region
+    disk:
+      name: data
+      mountPath: /var/lib/mysql
+      sizeGB: 1

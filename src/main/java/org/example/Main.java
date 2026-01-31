@@ -1,10 +1,12 @@
 package org.example;
 
+import java.sql.Connection;
+
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+
 import org.example.dao.DatabaseConnection;
 import org.example.gui.MainMenu;
-
-import javax.swing.*;
-import java.sql.Connection;
 
 public class Main {
     public static void main(String[] args) {
